@@ -10,7 +10,16 @@ import { Post } from "../../components/post/Post";
 import "./profile.css";
 import { Link } from "react-router-dom";
 
+
 export const Profile = () => {
+  const logOut = function(){
+    if(window.confirm("Çıkış yapmak istiyor musunuz ?") === true){
+    
+    }
+    else{
+      <h1>İşleminiz iptal edildi</h1>
+    }
+  } 
  
   return (
     <div className="container">
@@ -32,10 +41,9 @@ export const Profile = () => {
                 <button>
                   <SettingsOutlinedIcon />
                 </button>
-
-                <Link to={"/login"}>
-                <button >
-                  {}
+                
+                 <Link to={"/login"}>
+                <button onClick={()=> logOut()}>
                 <LogoutOutlinedIcon color="error" />
                 </button>
                 </Link>
